@@ -1,1 +1,95 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+body {
+  font-family: "Spartan", sans-serif;
+}
+
+.shop-now {
+  color: inherit;
+  text-decoration: none;
+}
+
+.img-hidden {
+  width: 100%;
+  visibility: hidden;
+}
+
+.no-display {
+  display: none;
+}
+
+.main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 1440px) {
+  .main-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.main-1 {
+  background-color: red;
+  min-height: 300px;
+}
+
+@media (min-width: 1440px) {
+  .main-1 {
+    width: 58%;
+  }
+}
+
+.main-2 {
+  background-color: green;
+}
+
+@media (min-width: 1440px) {
+  .main-2 {
+    width: 42%;
+    height: 80%;
+  }
+}
+
+.main-3 {
+  background-color: yellow;
+  width: 100%;
+  height: 200px;
+}
+
+@media (min-width: 1440px) {
+  .main-3 {
+    width: 30%;
+  }
+}
+
+.main-4 {
+  background-color: lightcoral;
+}
+
+@media (min-width: 1440px) {
+  .main-4 {
+    width: 40%;
+  }
+}
+
+.main-5 {
+  background-color: lightgreen;
+  width: 100%;
+  height: 200px;
+}
+
+@media (min-width: 1440px) {
+  .main-5 {
+    width: 30%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
