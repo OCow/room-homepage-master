@@ -7,11 +7,6 @@ body {
   text-decoration: none;
 }
 
-.img-hidden {
-  width: 100%;
-  visibility: hidden;
-}
-
 .no-display {
   display: none;
 }
@@ -26,7 +21,7 @@ body {
           flex-direction: column;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 800px) {
   .main-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -39,12 +34,19 @@ body {
 
 .main-1 {
   background-color: red;
-  min-height: 300px;
+  min-height: 250px;
+  background-image: url("./images/mobile-image-hero-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 800px) {
   .main-1 {
     width: 58%;
+    min-height: 500px;
+    background-image: url("./images/desktop-image-hero-1.jpg");
+    background-position: center;
   }
 }
 
@@ -52,7 +54,7 @@ body {
   background-color: green;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 800px) {
   .main-2 {
     width: 42%;
     height: 80%;
@@ -62,10 +64,14 @@ body {
 .main-3 {
   background-color: yellow;
   width: 100%;
-  height: 200px;
+  min-height: 300px;
+  background-image: url("./images/image-about-dark.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 800px) {
   .main-3 {
     width: 30%;
   }
@@ -75,7 +81,7 @@ body {
   background-color: lightcoral;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 800px) {
   .main-4 {
     width: 40%;
   }
@@ -84,10 +90,14 @@ body {
 .main-5 {
   background-color: lightgreen;
   width: 100%;
-  height: 200px;
+  min-height: 300px;
+  background-image: url("./images/image-about-light.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 800px) {
   .main-5 {
     width: 30%;
   }
