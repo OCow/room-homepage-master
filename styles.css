@@ -2,13 +2,45 @@ body {
   font-family: "Spartan", sans-serif;
 }
 
+p {
+  margin-bottom: 40px;
+  color: #a1a1a1;
+  line-height: 2rem;
+}
+
+h1,
+h2 {
+  color: #454545;
+}
+
 .shop-now {
-  color: inherit;
+  color: #454545;
   text-decoration: none;
+  letter-spacing: 10px;
 }
 
 .no-display {
   display: none;
+}
+
+.page-text-container {
+  margin: 40px 20px 40px;
+}
+
+@media (min-width: 1000px) {
+  .page-text-container {
+    margin: 80px 70px 50px;
+  }
+}
+
+.about-text-container {
+  margin: 40px 20px 40px;
+}
+
+@media (min-width: 1000px) {
+  .about-text-container {
+    margin: 80px 70px 50px;
+  }
 }
 
 .main-container {
@@ -21,7 +53,7 @@ body {
           flex-direction: column;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   .main-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -33,7 +65,6 @@ body {
 }
 
 .main-1 {
-  background-color: red;
   min-height: 250px;
   background-image: url("./images/mobile-image-hero-1.jpg");
   background-size: cover;
@@ -41,7 +72,7 @@ body {
   background-position: bottom;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   .main-1 {
     width: 58%;
     min-height: 500px;
@@ -50,19 +81,13 @@ body {
   }
 }
 
-.main-2 {
-  background-color: green;
-}
-
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   .main-2 {
     width: 42%;
-    height: 80%;
   }
 }
 
 .main-3 {
-  background-color: yellow;
   width: 100%;
   min-height: 300px;
   background-image: url("./images/image-about-dark.jpg");
@@ -71,24 +96,19 @@ body {
   background-position: center;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   .main-3 {
     width: 30%;
   }
 }
 
-.main-4 {
-  background-color: lightcoral;
-}
-
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   .main-4 {
     width: 40%;
   }
 }
 
 .main-5 {
-  background-color: lightgreen;
   width: 100%;
   min-height: 300px;
   background-image: url("./images/image-about-light.jpg");
@@ -97,7 +117,7 @@ body {
   background-position: center;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   .main-5 {
     width: 30%;
   }
