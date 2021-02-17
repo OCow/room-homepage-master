@@ -14,7 +14,6 @@ $font-weight-3: 700;
 
 body {
   font-family: $font-family;
-  //   font-weight: $font-weight-1;
 }
 
 p {
@@ -24,10 +23,14 @@ p {
 }
 
 nav {
+  // make width 100 % in mobile view, then use justify-content: space-between; to
+  // center "room" item appropriately
+  width: 100%;
   position: absolute;
-  margin-top: 10px;
+  margin-top: 30px;
 
   @media (min-width: $desktop-width) {
+    width: auto;
     margin-top: 30px;
   }
 }
@@ -38,6 +41,7 @@ nav > ul {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 
 nav > ul > li {
@@ -48,8 +52,7 @@ nav > ul > li {
 }
 
 nav > ul > li.shop-name {
-  margin-left: 50px;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: $font-weight-2;
 
   @media (min-width: $desktop-width) {
@@ -116,13 +119,12 @@ h2 {
 }
 
 .main-1 {
-  // background-color: red;
-  min-height: 250px;
+  min-height: 500px;
 
   background-image: url("./images/mobile-image-hero-1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center;
 
   @media (min-width: $desktop-width) {
     width: 58%;

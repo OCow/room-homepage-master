@@ -9,12 +9,14 @@ p {
 }
 
 nav {
+  width: 100%;
   position: absolute;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 @media (min-width: 1000px) {
   nav {
+    width: auto;
     margin-top: 30px;
   }
 }
@@ -31,6 +33,9 @@ nav > ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 nav > ul > li {
@@ -40,8 +45,7 @@ nav > ul > li {
 }
 
 nav > ul > li.shop-name {
-  margin-left: 50px;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 600;
 }
 
@@ -124,11 +128,11 @@ h2 {
 }
 
 .main-1 {
-  min-height: 250px;
+  min-height: 500px;
   background-image: url("./images/mobile-image-hero-1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center;
 }
 
 @media (min-width: 1000px) {
