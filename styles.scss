@@ -23,6 +23,55 @@ p {
   line-height: 2rem;
 }
 
+nav {
+  position: absolute;
+  margin-top: 10px;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 30px;
+  }
+}
+
+nav > ul {
+  // remove bullets from list
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+nav > ul > li {
+  // show list items in one line
+  margin-right: 20px;
+  font-size: 14px;
+  color: white;
+}
+
+nav > ul > li.shop-name {
+  margin-left: 50px;
+  font-size: 20px;
+  font-weight: $font-weight-2;
+
+  @media (min-width: $desktop-width) {
+    font-size: 30px;
+  }
+}
+
+nav > ul > li.burger-menu {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+nav > ul > li.nav-link {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    // display actual links only on desktop
+    display: list-item;
+  }
+}
+
 h1,
 h2 {
   color: $very-dark-gray;

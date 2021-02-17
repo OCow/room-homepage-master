@@ -8,6 +8,65 @@ p {
   line-height: 2rem;
 }
 
+nav {
+  position: absolute;
+  margin-top: 10px;
+}
+
+@media (min-width: 1000px) {
+  nav {
+    margin-top: 30px;
+  }
+}
+
+nav > ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav > ul > li {
+  margin-right: 20px;
+  font-size: 14px;
+  color: white;
+}
+
+nav > ul > li.shop-name {
+  margin-left: 50px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+@media (min-width: 1000px) {
+  nav > ul > li.shop-name {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1000px) {
+  nav > ul > li.burger-menu {
+    display: none;
+  }
+}
+
+nav > ul > li.nav-link {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  nav > ul > li.nav-link {
+    display: list-item;
+  }
+}
+
 h1,
 h2 {
   color: #454545;
