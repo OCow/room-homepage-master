@@ -92,7 +92,7 @@ h2 {
 
 @media (min-width: 1000px) {
   .page-text-container {
-    margin: 80px 70px 50px;
+    margin: 40px 50px 50px;
   }
 }
 
@@ -144,10 +144,41 @@ h2 {
   }
 }
 
+.main-2 {
+  position: relative;
+}
+
 @media (min-width: 1000px) {
   .main-2 {
     width: 42%;
   }
+}
+
+.navigation-buttons-container {
+  height: 13%;
+  width: 28.6%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#navigation-button-left {
+  background-color: black;
+  width: 50%;
+  background-image: url("./images/icon-angle-left.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#navigation-button-right {
+  background-color: black;
+  width: 50%;
+  background-image: url("./images/icon-angle-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .main-3 {

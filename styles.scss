@@ -95,7 +95,7 @@ h2 {
   margin: 40px 20px 40px;
 
   @media (min-width: $desktop-width) {
-    margin: 80px 70px 50px;
+    margin: 40px 50px 50px;
   }
 }
 
@@ -135,11 +135,43 @@ h2 {
 }
 
 .main-2 {
-  // background-color: green;
+  // use position relative so that navigation-buttons-container can be
+  //positioned relative to the parent element. This helps us for placing
+  //the navigation buttons (arrow left/right) in the bottom left corner
+  position: relative;
 
   @media (min-width: $desktop-width) {
     width: 42%;
   }
+}
+
+.navigation-buttons-container {
+  // background-color: red;
+  height: 13%;
+
+  //the width was calculated experimentally.
+  // TODO figure out a way to do that better
+  width: 28.6%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+}
+
+#navigation-button-left {
+  background-color: $black;
+  width: 50%;
+  background-image: url("./images/icon-angle-left.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#navigation-button-right {
+  background-color: $black;
+  width: 50%;
+  background-image: url("./images/icon-angle-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .main-3 {
