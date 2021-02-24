@@ -145,20 +145,23 @@ h2 {
   }
 }
 
-.navigation-buttons-container {
-  // background-color: red;
-  height: 13%;
+.navigation-buttons-container-desktop {
+  display: none;
 
-  //the width was calculated experimentally.
-  // TODO figure out a way to do that better
-  width: 28.6%;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  display: flex;
+  @media (min-width: $desktop-width) {
+    height: 13%;
+
+    //the width was calculated experimentally.
+    // TODO figure out a way to do that better
+    width: 28.6%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+  }
 }
 
-#navigation-button-left {
+#navigation-button-left-desktop {
   background-color: $black;
   width: 50%;
   background-image: url("./images/icon-angle-left.svg");
@@ -166,7 +169,7 @@ h2 {
   background-position: center;
 }
 
-#navigation-button-right {
+#navigation-button-right-desktop {
   background-color: $black;
   width: 50%;
   background-image: url("./images/icon-angle-right.svg");

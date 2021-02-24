@@ -154,18 +154,24 @@ h2 {
   }
 }
 
-.navigation-buttons-container {
-  height: 13%;
-  width: 28.6%;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.navigation-buttons-container-desktop {
+  display: none;
 }
 
-#navigation-button-left {
+@media (min-width: 1000px) {
+  .navigation-buttons-container-desktop {
+    height: 13%;
+    width: 28.6%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+#navigation-button-left-desktop {
   background-color: black;
   width: 50%;
   background-image: url("./images/icon-angle-left.svg");
@@ -173,7 +179,7 @@ h2 {
   background-position: center;
 }
 
-#navigation-button-right {
+#navigation-button-right-desktop {
   background-color: black;
   width: 50%;
   background-image: url("./images/icon-angle-right.svg");
