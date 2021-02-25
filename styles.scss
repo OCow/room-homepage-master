@@ -127,7 +127,9 @@ h2 {
 .main-1 {
   position: relative;
   min-height: 500px;
-  background-image: url("./images/mobile-image-hero-1.jpg");
+  //background image is set in javascript, because this is also
+  //changed in javascript when buttons are being pressed
+  // background-image: url("./images/mobile-image-hero-1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
