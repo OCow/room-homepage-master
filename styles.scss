@@ -12,6 +12,8 @@ $font-weight-1: 500;
 $font-weight-2: 600;
 $font-weight-3: 700;
 
+$main-1-width: 30%;
+
 body {
   font-family: $font-family;
 }
@@ -33,6 +35,10 @@ nav {
     width: auto;
     margin-top: 30px;
   }
+}
+
+nav {
+  z-index: 1000;
 }
 
 nav > ul {
@@ -119,8 +125,8 @@ h2 {
 }
 
 .main-1 {
+  position: relative;
   min-height: 500px;
-
   background-image: url("./images/mobile-image-hero-1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -145,13 +151,47 @@ h2 {
   }
 }
 
+.navigation-buttons-container-mobile {
+  width: 120px;
+  height: 60px;
+  background-color: red;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+#navigation-button-left-mobile {
+  background-color: $black;
+  width: 50%;
+  background-image: url("./images/icon-angle-left.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#navigation-button-right-mobile {
+  background-color: $black;
+  width: 50%;
+
+  background-image: url("./images/icon-angle-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .navigation-buttons-container-desktop {
   display: none;
 
   @media (min-width: $desktop-width) {
     height: 13%;
 
-    //the width was calculated experimentally.
+    //the width is 100 % - 58 % (main-1) - 30 % (main-5)
+    //of the whole viewport. However, in this case the
+    //width is calculated as a fraction of main-2, therefore
+    //it is almost 29 %.
     // TODO figure out a way to do that better
     width: 28.6%;
     position: absolute;
