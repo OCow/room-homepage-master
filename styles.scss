@@ -44,11 +44,11 @@ nav.nav-view-default {
   margin-top: 30px;
   color: white;
 
-  // @media (max-width: $desktop-width) {
-  //   // only show burger menu, not the actual links
-  //   ul > li.nav-link {
-  //     display: none;
-  //   }
+  @media (max-width: $desktop-width) {
+    // only show burger menu, not the actual links
+    ul > li.nav-link {
+      display: none;
+    }
   }
 
   @media (min-width: $desktop-width) {

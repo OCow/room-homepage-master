@@ -40,7 +40,7 @@ window.onload = () => {
 
 function onWindowResize(e) {
   // console.log(e);
-  console.log(window.innerWidth);
+  // console.log(window.innerWidth);
 
   //in case the width is larger or equal to 1000,
   //check if the mobile menu is currently being shown (meaning
