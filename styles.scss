@@ -24,6 +24,16 @@ p {
   line-height: 2rem;
 }
 
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 500;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 nav.nav-view-default {
   // background-color: red;
   // make width 100 % in mobile view, then use justify-content: space-between; to
@@ -34,8 +44,11 @@ nav.nav-view-default {
   margin-top: 30px;
   color: white;
 
-  ul > li.nav-link {
-    display: none;
+  // @media (max-width: $desktop-width) {
+  //   // only show burger menu, not the actual links
+  //   ul > li.nav-link {
+  //     display: none;
+  //   }
   }
 
   @media (min-width: $desktop-width) {
@@ -63,16 +76,16 @@ nav.nav-view-clicked {
 }
 
 // in case of non clicked nav thinggy, dont display the close button
-nav.nav-view-default > ul > li.close-mobile-menu {
-  display: none;
-}
+// nav.nav-view-default > ul > li.close-mobile-menu {
+//   display: none;
+// }
 
 // in case the burger was clicked, do not show the burger anymore
 // TODO we could get rid of one thing (burger or close button) and
 // TODO simply change the referenced svg file
-nav.nav-view-clicked > ul > li.burger-menu {
-  display: none;
-}
+// nav.nav-view-clicked > ul > li.burger-menu {
+//   display: none;
+// }
 
 nav > ul {
   // remove bullets from list
@@ -98,7 +111,7 @@ nav > ul > li.shop-name {
   }
 }
 
-nav > ul > li.burger-menu {
+nav > ul > li.mobile-menu-button {
   @media (min-width: $desktop-width) {
     display: none;
   }

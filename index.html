@@ -28,11 +28,15 @@
 </head>
 
 <body>
-  <!-- <nav class="nav-view-default"> -->
-  <nav class="nav-view-clicked">
+  <!-- backdrop being shown when burger menu is being clicked, therefore no-display by default -->
+  <div id="mm-backdrop" class="backdrop no-display"></div>
+
+  <nav id="my-navbar" class="nav-view-default">
+    <!-- <nav class="nav-view-clicked"> -->
     <ul class="nav-links">
-      <li class="burger-menu"><img src="./images/icon-hamburger.svg" alt="burger menu"></li>
-      <li class="close-mobile-menu"><img src="./images/icon-close.svg" alt="close button"></li>
+      <li id="mmbtn" class="mobile-menu-button"><img id="mm-img" src="./images/icon-hamburger.svg" alt="burger menu">
+      </li>
+      <!-- <li class="mobile-menu-button"><img src="./images/icon-close.svg" alt="close button"></li> -->
       <li class="shop-name">room</li>
       <li class="nav-link">home</li>
       <li class="nav-link">shop</li>
