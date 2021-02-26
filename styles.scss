@@ -24,21 +24,54 @@ p {
   line-height: 2rem;
 }
 
-nav {
+nav.nav-view-default {
+  // background-color: red;
   // make width 100 % in mobile view, then use justify-content: space-between; to
   // center "room" item appropriately
+  z-index: 1000;
   width: 100%;
   position: absolute;
   margin-top: 30px;
+  color: white;
+
+  ul > li.nav-link {
+    display: none;
+  }
 
   @media (min-width: $desktop-width) {
     width: auto;
-    margin-top: 30px;
   }
 }
 
-nav {
+nav.nav-view-clicked {
   z-index: 1000;
+  width: 100%;
+  position: absolute;
+  margin-top: 0;
+  background-color: $white;
+  color: $very-dark-gray;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  li:last-child {
+    margin-right: 10%;
+  }
+
+  .shop-name {
+    display: none;
+  }
+}
+
+// in case of non clicked nav thinggy, dont display the close button
+nav.nav-view-default > ul > li.close-mobile-menu {
+  display: none;
+}
+
+// in case the burger was clicked, do not show the burger anymore
+// TODO we could get rid of one thing (burger or close button) and
+// TODO simply change the referenced svg file
+nav.nav-view-clicked > ul > li.burger-menu {
+  display: none;
 }
 
 nav > ul {
@@ -54,7 +87,6 @@ nav > ul > li {
   // show list items in one line
   margin-right: 20px;
   font-size: 14px;
-  color: white;
 }
 
 nav > ul > li.shop-name {
@@ -73,8 +105,6 @@ nav > ul > li.burger-menu {
 }
 
 nav > ul > li.nav-link {
-  display: none;
-
   @media (min-width: $desktop-width) {
     // display actual links only on desktop
     display: list-item;
@@ -156,7 +186,6 @@ h2 {
 .navigation-buttons-container-mobile {
   width: 120px;
   height: 60px;
-  background-color: red;
   position: absolute;
   right: 0;
   bottom: 0;

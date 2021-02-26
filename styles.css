@@ -8,21 +8,49 @@ p {
   line-height: 2rem;
 }
 
-nav {
+nav.nav-view-default {
+  z-index: 1000;
   width: 100%;
   position: absolute;
   margin-top: 30px;
+  color: white;
+}
+
+nav.nav-view-default ul > li.nav-link {
+  display: none;
 }
 
 @media (min-width: 1000px) {
-  nav {
+  nav.nav-view-default {
     width: auto;
-    margin-top: 30px;
   }
 }
 
-nav {
+nav.nav-view-clicked {
   z-index: 1000;
+  width: 100%;
+  position: absolute;
+  margin-top: 0;
+  background-color: white;
+  color: #454545;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+nav.nav-view-clicked li:last-child {
+  margin-right: 10%;
+}
+
+nav.nav-view-clicked .shop-name {
+  display: none;
+}
+
+nav.nav-view-default > ul > li.close-mobile-menu {
+  display: none;
+}
+
+nav.nav-view-clicked > ul > li.burger-menu {
+  display: none;
 }
 
 nav > ul {
@@ -45,7 +73,6 @@ nav > ul {
 nav > ul > li {
   margin-right: 20px;
   font-size: 14px;
-  color: white;
 }
 
 nav > ul > li.shop-name {
@@ -63,10 +90,6 @@ nav > ul > li.shop-name {
   nav > ul > li.burger-menu {
     display: none;
   }
-}
-
-nav > ul > li.nav-link {
-  display: none;
 }
 
 @media (min-width: 1000px) {
@@ -161,7 +184,6 @@ h2 {
 .navigation-buttons-container-mobile {
   width: 120px;
   height: 60px;
-  background-color: red;
   position: absolute;
   right: 0;
   bottom: 0;
