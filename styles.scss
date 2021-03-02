@@ -44,15 +44,17 @@ nav.nav-view-default {
   margin-top: 30px;
   color: white;
 
-  @media (max-width: $desktop-width) {
-    // only show burger menu, not the actual links
-    ul > li.nav-link {
-      display: none;
-    }
+  ul > li.nav-link {
+    display: none;
   }
 
   @media (min-width: $desktop-width) {
     width: auto;
+
+    // only show burger menu, not the actual links
+    ul > li.nav-link {
+      display: list-item;
+    }
   }
 }
 
@@ -81,8 +83,6 @@ nav.nav-view-clicked {
 // }
 
 // in case the burger was clicked, do not show the burger anymore
-// TODO we could get rid of one thing (burger or close button) and
-// TODO simply change the referenced svg file
 // nav.nav-view-clicked > ul > li.burger-menu {
 //   display: none;
 // }
@@ -117,12 +117,12 @@ nav > ul > li.mobile-menu-button {
   }
 }
 
-nav > ul > li.nav-link {
-  @media (min-width: $desktop-width) {
-    // display actual links only on desktop
-    display: list-item;
-  }
-}
+// nav > ul > li.nav-link {
+//   @media (min-width: $desktop-width) {
+//     // display actual links only on desktop
+//     display: list-item;
+//   }
+// }
 
 h1,
 h2 {

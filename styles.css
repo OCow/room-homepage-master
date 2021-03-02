@@ -26,15 +26,16 @@ nav.nav-view-default {
   color: white;
 }
 
-@media (max-width: 1000px) {
-  nav.nav-view-default ul > li.nav-link {
-    display: none;
-  }
+nav.nav-view-default ul > li.nav-link {
+  display: none;
 }
 
 @media (min-width: 1000px) {
   nav.nav-view-default {
     width: auto;
+  }
+  nav.nav-view-default ul > li.nav-link {
+    display: list-item;
   }
 }
 
@@ -93,12 +94,6 @@ nav > ul > li.shop-name {
 @media (min-width: 1000px) {
   nav > ul > li.mobile-menu-button {
     display: none;
-  }
-}
-
-@media (min-width: 1000px) {
-  nav > ul > li.nav-link {
-    display: list-item;
   }
 }
 

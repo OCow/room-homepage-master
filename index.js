@@ -39,17 +39,33 @@ window.onload = () => {
 };
 
 function onWindowResize(e) {
-  // console.log(e);
-  // console.log(window.innerWidth);
+  let mobileMenuButton = document.getElementById("mmbtn");
+  const style = getComputedStyle(mobileMenuButton);
+  console.log(style.display);
 
-  //in case the width is larger or equal to 1000,
-  //check if the mobile menu is currently being shown (meaning
-  //that the burger menu was clicked). In case it is, ensure
-  //that the class is appropriately changed
-  if (window.innerWidth >= 1000) {
-    if (showMobileMenu === true) {
+  //in scss, there is a media query which changes display of this element
+  //(nav > ul > li.mobile-menu-button {)
+  //Therefore, we rely on the value of that element in order to determine
+  //that the mobile nav menu should be closed (if open). This is all this is
+  //about. The actual changing of the menu is done in scss, here we are only
+  //dealing with an openend mobile nav menu while the width of the viewport
+  //is being increased
+  if (style.display === "none") {
+    //ok, looks like we are in desktop mode. Now check if the mobile menu
+    //is being shown currently. If yes, deactivate it
+    if (mobileNavMenuVisible()) {
       onClickMenuButton();
     }
+  }
+}
+
+function mobileNavMenuVisible() {
+  if (
+    document.getElementById("my-navbar").classList.contains("nav-view-clicked")
+  ) {
+    return true;
+  } else {
+    return false;
   }
 }
 
@@ -59,7 +75,8 @@ function onClickMenuButton(e) {
   let img = document.getElementById("mm-img");
   let backdrop = document.getElementById("mm-backdrop");
 
-  if (showMobileMenu === true) {
+  if (mobileNavMenuVisible()) {
+    //looks like we are showing the clicked nav view right now
     //switch back to showing burger menu
     img.src = "./images/icon-hamburger.svg";
     navbar.classList.add("nav-view-default");
@@ -75,9 +92,6 @@ function onClickMenuButton(e) {
     navbar.classList.add("nav-view-clicked");
     backdrop.classList.remove("no-display");
   }
-
-  //toggle variable
-  showMobileMenu = !showMobileMenu;
 }
 
 function onClickBackdrop() {
