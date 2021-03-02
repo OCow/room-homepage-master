@@ -45,15 +45,24 @@ nav.nav-view-default {
   color: white;
 
   ul > li.nav-link {
+    //mobile view, only show burger menu, not the actual links
     display: none;
   }
 
   @media (min-width: $desktop-width) {
     width: auto;
 
-    // only show burger menu, not the actual links
     ul > li.nav-link {
       display: list-item;
+      //must be also applied to shop name
+      padding-bottom: 10px;
+    }
+
+    ul > li.nav-link:hover {
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+
+      cursor: pointer;
     }
   }
 }
@@ -106,6 +115,10 @@ nav > ul > li.shop-name {
   font-size: 25px;
   font-weight: $font-weight-2;
 
+  //matches the padding-bottom of nav-link, used for proper underline
+  //in hover style
+  padding-bottom: 10px;
+
   @media (min-width: $desktop-width) {
     font-size: 30px;
   }
@@ -117,13 +130,6 @@ nav > ul > li.mobile-menu-button {
   }
 }
 
-// nav > ul > li.nav-link {
-//   @media (min-width: $desktop-width) {
-//     // display actual links only on desktop
-//     display: list-item;
-//   }
-// }
-
 h1,
 h2 {
   color: $very-dark-gray;
@@ -133,6 +139,16 @@ h2 {
   color: $very-dark-gray;
   text-decoration: none;
   letter-spacing: 10px;
+
+  transition-property: letter-spacing;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in;
+  transition-delay: 0;
+}
+
+.shop-now:hover {
+  color: $dark-gray;
+  letter-spacing: 18px;
 }
 
 .no-display {
@@ -245,20 +261,25 @@ h2 {
   }
 }
 
-#navigation-button-left-desktop {
+#navigation-button-left-desktop,
+#navigation-button-right-desktop {
   background-color: $black;
   width: 50%;
-  background-image: url("./images/icon-angle-left.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
+#navigation-button-left-desktop:hover,
+#navigation-button-right-desktop:hover {
+  background-color: $very-dark-gray;
+}
+
+#navigation-button-left-desktop {
+  background-image: url("./images/icon-angle-left.svg");
+}
+
 #navigation-button-right-desktop {
-  background-color: $black;
-  width: 50%;
   background-image: url("./images/icon-angle-right.svg");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .main-3 {

@@ -36,6 +36,12 @@ nav.nav-view-default ul > li.nav-link {
   }
   nav.nav-view-default ul > li.nav-link {
     display: list-item;
+    padding-bottom: 10px;
+  }
+  nav.nav-view-default ul > li.nav-link:hover {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    cursor: pointer;
   }
 }
 
@@ -83,6 +89,7 @@ nav > ul > li {
 nav > ul > li.shop-name {
   font-size: 25px;
   font-weight: 600;
+  padding-bottom: 10px;
 }
 
 @media (min-width: 1000px) {
@@ -106,6 +113,19 @@ h2 {
   color: #454545;
   text-decoration: none;
   letter-spacing: 10px;
+  -webkit-transition-property: letter-spacing;
+  transition-property: letter-spacing;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+.shop-now:hover {
+  color: #a1a1a1;
+  letter-spacing: 18px;
 }
 
 .no-display {
@@ -230,20 +250,25 @@ h2 {
   }
 }
 
-#navigation-button-left-desktop {
+#navigation-button-left-desktop,
+#navigation-button-right-desktop {
   background-color: black;
   width: 50%;
-  background-image: url("./images/icon-angle-left.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
+#navigation-button-left-desktop:hover,
+#navigation-button-right-desktop:hover {
+  background-color: #454545;
+}
+
+#navigation-button-left-desktop {
+  background-image: url("./images/icon-angle-left.svg");
+}
+
 #navigation-button-right-desktop {
-  background-color: black;
-  width: 50%;
   background-image: url("./images/icon-angle-right.svg");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .main-3 {
